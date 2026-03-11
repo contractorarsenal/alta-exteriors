@@ -19,9 +19,9 @@
       --navy:    #2F2F30;
       --navy-lt: #3D3D3E;
       --navy-md: #474748;
-      --teal:    #FFFFFF;
-      --teal-dk: #C8C8C8;
-      --teal-bg: rgba(255,255,255,0.07);
+      --teal:    #D4A843;
+      --teal-dk: #B8923A;
+      --teal-bg: rgba(212,168,67,0.1);
       --white:   #FFFFFF;
       --light:   #F2F2F2;
       --dim:     rgba(255,255,255,0.65);
@@ -129,7 +129,7 @@
     .section-heading .teal { color: var(--teal); }
 
     .section-heading.dark { color: var(--navy); }
-    .section-heading.dark .teal { color: var(--navy); }
+    .section-heading.dark .teal { color: var(--teal-dk); }
 
     /* ── ANNOUNCEMENT BAR ───────────────────────────────────────── */
     .announce-bar {
@@ -197,6 +197,20 @@
       margin-top: 3px;
     }
 
+    .nav-logo-img {
+      height: 52px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    .footer-logo-img {
+      height: 60px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      margin-bottom: 4px;
+    }
+
     .nav-links {
       display: flex;
       align-items: center;
@@ -239,7 +253,7 @@
       letter-spacing: 0.04em;
       transition: color var(--tr);
     }
-    .nav-phone:hover { color: var(--white); }
+    .nav-phone:hover { color: var(--teal); }
 
     /* Hamburger */
     .hamburger {
@@ -373,7 +387,7 @@
       display: block;
       transition: color var(--tr);
     }
-    .hero-phone:hover { color: var(--white); }
+    .hero-phone:hover { color: var(--teal); }
 
     .hero-actions {
       display: flex;
@@ -417,8 +431,8 @@
     .marquee-wrap {
       background: var(--white);
       overflow: hidden;
-      border-top: 3px solid var(--navy);
-      border-bottom: 3px solid var(--navy);
+      border-top: 3px solid var(--teal);
+      border-bottom: 3px solid var(--teal);
       padding: 14px 0;
     }
     .marquee-track {
@@ -454,7 +468,7 @@
     .marquee-dot {
       width: 8px; height: 8px;
       border-radius: 50%;
-      background: var(--navy);
+      background: var(--teal);
       flex-shrink: 0;
     }
 
@@ -639,7 +653,7 @@
       font-family: 'Oswald', sans-serif;
       font-size: 0.9rem;
       font-weight: 600;
-      color: var(--navy);
+      color: var(--teal-dk);
       min-width: 28px;
       padding-top: 1px;
     }
@@ -762,7 +776,7 @@
 
     /* ── STATS STRIP ─────────────────────────────────────────────── */
     .stats-strip {
-      background: var(--navy-lt);
+      background: var(--teal);
       padding: 52px 0;
     }
     .stats-grid {
@@ -773,14 +787,14 @@
     .stat-item {
       text-align: center;
       padding: 0 20px;
-      border-right: 1px solid rgba(255,255,255,0.12);
+      border-right: 1px solid rgba(47,47,48,0.2);
     }
     .stat-item:last-child { border-right: none; }
     .stat-num {
       font-family: 'Oswald', sans-serif;
       font-size: clamp(2.4rem, 5vw, 3.5rem);
       font-weight: 700;
-      color: var(--white);
+      color: var(--navy);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -790,7 +804,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
+      color: rgba(47,47,48,0.72);
     }
 
     /* ── QUOTE FORM ──────────────────────────────────────────────── */
@@ -848,7 +862,7 @@
       font-weight: 700;
       color: var(--white);
     }
-    .contact-val a:hover { color: rgba(255,255,255,0.75); transition: color var(--tr); }
+    .contact-val a:hover { color: var(--teal); transition: color var(--tr); }
 
     /* Form */
     .quote-form {
@@ -905,8 +919,8 @@
     }
     input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
     input:focus, select:focus, textarea:focus {
-      border-color: var(--white);
-      box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(212,168,67,0.18);
     }
     select option { background: #2F2F30; color: #fff; }
     textarea { resize: vertical; min-height: 110px; }
@@ -1085,7 +1099,7 @@
       .stats-grid { grid-template-columns: 1fr; gap: 0; }
       .stat-item {
         border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.12);
+        border-bottom: 1px solid rgba(47,47,48,0.2);
         padding: 24px 20px;
       }
       .stat-item:last-child { border-bottom: none; }
@@ -1136,9 +1150,8 @@
   <nav id="navbar">
     <div style="max-width:1200px; margin:0 auto;">
       <div class="nav-inner">
-        <a href="#hero" class="logo">
-          <span class="logo-name">Alta <span class="teal">Exteriors</span></span>
-          <span class="logo-sub">Licensed &amp; Insured · Seattle, WA</span>
+        <a href="#hero">
+          <img src="https://github.com/user-attachments/assets/1c5bb8f5-2616-4d51-be6e-2c4920224e42" alt="Alta Exteriors" class="nav-logo-img" />
         </a>
 
         <ul class="nav-links">
@@ -1589,10 +1602,9 @@
       <div class="footer-grid">
 
         <div class="footer-brand">
-          <div class="logo">
-            <span class="logo-name">Alta <span class="teal">Exteriors</span></span>
-            <span class="logo-sub">Licensed &amp; Insured Contractor</span>
-          </div>
+          <a href="#hero">
+            <img src="https://github.com/user-attachments/assets/1c5bb8f5-2616-4d51-be6e-2c4920224e42" alt="Alta Exteriors" class="footer-logo-img" />
+          </a>
           <p class="footer-desc">
             Raising the standard in exterior care for homeowners across the greater Seattle area.
             Quality craftsmanship, honest pricing, exceptional results.
