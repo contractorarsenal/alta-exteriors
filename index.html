@@ -16,14 +16,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --navy:    #091230;
-      --navy-lt: #0D1A40;
-      --navy-md: #0F2050;
-      --teal:    #2DD4D4;
-      --teal-dk: #1AACB2;
-      --teal-bg: rgba(45,212,212,0.1);
+      --navy:    #2F2F30;
+      --navy-lt: #3D3D3E;
+      --navy-md: #474748;
+      --teal:    #FFFFFF;
+      --teal-dk: #C8C8C8;
+      --teal-bg: rgba(255,255,255,0.07);
       --white:   #FFFFFF;
-      --light:   #EEF4FB;
+      --light:   #F2F2F2;
       --dim:     rgba(255,255,255,0.65);
       --dim2:    rgba(255,255,255,0.15);
       --radius:  8px;
@@ -78,7 +78,7 @@
       background: var(--teal-dk);
       border-color: var(--teal-dk);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(45,212,212,0.35);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.28);
     }
 
     .btn-outline-teal {
@@ -129,7 +129,7 @@
     .section-heading .teal { color: var(--teal); }
 
     .section-heading.dark { color: var(--navy); }
-    .section-heading.dark .teal { color: var(--teal-dk); }
+    .section-heading.dark .teal { color: var(--navy); }
 
     /* ── ANNOUNCEMENT BAR ───────────────────────────────────────── */
     .announce-bar {
@@ -235,10 +235,11 @@
       font-family: 'Oswald', sans-serif;
       font-size: 1.05rem;
       font-weight: 600;
-      color: var(--white);
+      color: rgba(255,255,255,0.8);
       letter-spacing: 0.04em;
+      transition: color var(--tr);
     }
-    .nav-phone:hover { color: var(--teal); transition: color var(--tr); }
+    .nav-phone:hover { color: var(--white); }
 
     /* Hamburger */
     .hamburger {
@@ -315,14 +316,14 @@
       overflow: hidden;
       background:
         linear-gradient(to bottom,
-          rgba(6,10,28,0.88) 0%,
-          rgba(8,14,38,0.78) 40%,
-          rgba(6,10,28,0.92) 100%
+          rgba(20,20,21,0.88) 0%,
+          rgba(30,30,31,0.75) 40%,
+          rgba(20,20,21,0.92) 100%
         ),
         url('https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1920&q=80')
           center / cover no-repeat;
       /* Fallback gradient if image doesn't load */
-      background-color: #060A1C;
+      background-color: #1a1a1b;
     }
 
     .hero-teal-bar {
@@ -366,12 +367,13 @@
       font-family: 'Oswald', sans-serif;
       font-size: clamp(2rem, 6vw, 4rem);
       font-weight: 700;
-      color: var(--white);
+      color: rgba(255,255,255,0.9);
       letter-spacing: 0.04em;
       margin: 28px 0;
       display: block;
+      transition: color var(--tr);
     }
-    .hero-phone:hover { color: var(--teal); transition: color var(--tr); }
+    .hero-phone:hover { color: var(--white); }
 
     .hero-actions {
       display: flex;
@@ -415,8 +417,8 @@
     .marquee-wrap {
       background: var(--white);
       overflow: hidden;
-      border-top: 3px solid var(--teal);
-      border-bottom: 3px solid var(--teal);
+      border-top: 3px solid var(--navy);
+      border-bottom: 3px solid var(--navy);
       padding: 14px 0;
     }
     .marquee-track {
@@ -452,7 +454,7 @@
     .marquee-dot {
       width: 8px; height: 8px;
       border-radius: 50%;
-      background: var(--teal-dk);
+      background: var(--navy);
       flex-shrink: 0;
     }
 
@@ -637,7 +639,7 @@
       font-family: 'Oswald', sans-serif;
       font-size: 0.9rem;
       font-weight: 600;
-      color: var(--teal-dk);
+      color: var(--navy);
       min-width: 28px;
       padding-top: 1px;
     }
@@ -717,7 +719,7 @@
       left: calc(12.5% + 2px);
       right: calc(12.5% + 2px);
       height: 2px;
-      background: linear-gradient(90deg, var(--teal) 0%, rgba(45,212,212,0.2) 100%);
+      background: linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.15) 100%);
       z-index: 0;
     }
 
@@ -760,7 +762,7 @@
 
     /* ── STATS STRIP ─────────────────────────────────────────────── */
     .stats-strip {
-      background: var(--teal);
+      background: var(--navy-lt);
       padding: 52px 0;
     }
     .stats-grid {
@@ -771,14 +773,14 @@
     .stat-item {
       text-align: center;
       padding: 0 20px;
-      border-right: 1px solid rgba(9,18,48,0.25);
+      border-right: 1px solid rgba(255,255,255,0.12);
     }
     .stat-item:last-child { border-right: none; }
     .stat-num {
       font-family: 'Oswald', sans-serif;
       font-size: clamp(2.4rem, 5vw, 3.5rem);
       font-weight: 700;
-      color: var(--navy);
+      color: var(--white);
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -788,7 +790,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--navy-lt);
+      color: rgba(255,255,255,0.55);
     }
 
     /* ── QUOTE FORM ──────────────────────────────────────────────── */
@@ -846,7 +848,7 @@
       font-weight: 700;
       color: var(--white);
     }
-    .contact-val a:hover { color: var(--teal); transition: color var(--tr); }
+    .contact-val a:hover { color: rgba(255,255,255,0.75); transition: color var(--tr); }
 
     /* Form */
     .quote-form {
@@ -903,10 +905,10 @@
     }
     input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.2); }
     input:focus, select:focus, textarea:focus {
-      border-color: var(--teal);
-      box-shadow: 0 0 0 3px rgba(45,212,212,0.12);
+      border-color: var(--white);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.1);
     }
-    select option { background: #111827; color: #fff; }
+    select option { background: #2F2F30; color: #fff; }
     textarea { resize: vertical; min-height: 110px; }
 
     .form-submit { margin-top: 6px; }
@@ -921,8 +923,8 @@
 
     /* ── FOOTER ──────────────────────────────────────────────────── */
     footer {
-      background: linear-gradient(135deg, #062035 0%, #0A2A4A 40%, #083040 100%);
-      border-top: 3px solid var(--teal);
+      background: linear-gradient(135deg, #1a1a1b 0%, #2F2F30 50%, #252526 100%);
+      border-top: 3px solid rgba(255,255,255,0.15);
       padding: 70px 0 36px;
     }
 
@@ -1020,7 +1022,7 @@
     }
     .floating-cta.visible { display: block; }
     .floating-cta .btn {
-      box-shadow: 0 6px 24px rgba(45,212,212,0.45);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.4);
       border-radius: 100px;
     }
 
@@ -1083,7 +1085,7 @@
       .stats-grid { grid-template-columns: 1fr; gap: 0; }
       .stat-item {
         border-right: none;
-        border-bottom: 1px solid rgba(9,18,48,0.25);
+        border-bottom: 1px solid rgba(255,255,255,0.12);
         padding: 24px 20px;
       }
       .stat-item:last-child { border-bottom: none; }
