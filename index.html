@@ -609,18 +609,18 @@
     /* ── WHY CHOOSE US ───────────────────────────────────────────── */
     #why {
       padding: 90px 0;
-      background: var(--light);
+      background: var(--navy);
     }
 
     .why-header {
       text-align: center;
       margin-bottom: 60px;
     }
-    .why-header .section-heading.dark { margin-bottom: 12px; }
+    .why-header .section-heading { margin-bottom: 12px; }
     .why-header p {
       font-size: 1rem;
-      color: #4B5563;
-      max-width: 520px;
+      color: var(--dim);
+      max-width: 580px;
       margin: 0 auto;
     }
 
@@ -637,8 +637,8 @@
       gap: 0;
     }
     .why-item {
-      padding: 28px 0;
-      border-bottom: 1px solid #D1D9E0;
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .why-item:first-child { padding-top: 0; }
     .why-item:last-child { border-bottom: none; }
@@ -653,19 +653,19 @@
       font-family: 'Oswald', sans-serif;
       font-size: 0.9rem;
       font-weight: 600;
-      color: var(--teal-dk);
+      color: var(--teal);
       min-width: 28px;
-      padding-top: 1px;
+      padding-top: 2px;
     }
     .why-title {
       font-family: 'Open Sans', sans-serif;
       font-size: 1rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--white);
     }
     .why-desc {
-      font-size: 0.93rem;
-      color: #4B5563;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.55);
       line-height: 1.8;
       padding-left: 42px;
     }
@@ -678,7 +678,7 @@
     .why-img {
       border-radius: var(--radius);
       overflow: hidden;
-      aspect-ratio: 4/3;
+      aspect-ratio: 16/10;
       background: var(--navy-md);
       position: relative;
     }
@@ -686,16 +686,49 @@
       width: 100%; height: 100%;
       object-fit: cover;
     }
-    .why-img::after {
-      content: '🏠';
-      position: absolute;
-      inset: 0;
+
+    /* Service areas card */
+    .why-service-areas {
+      background: var(--navy-lt);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-left: 3px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+    }
+    .why-areas-heading {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+    .why-areas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+      margin-bottom: 14px;
+    }
+    .why-areas-grid span {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.65);
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-      opacity: 0.15;
-      pointer-events: none;
+      gap: 6px;
+    }
+    .why-areas-grid span::before {
+      content: '→';
+      color: var(--teal);
+      font-size: 0.72rem;
+      flex-shrink: 0;
+    }
+    .why-areas-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.35);
+      font-style: italic;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 12px;
     }
 
     /* ── PROCESS ─────────────────────────────────────────────────── */
@@ -1080,8 +1113,6 @@
       .about-image { max-width: 560px; }
 
       .why-inner { grid-template-columns: 1fr; gap: 50px; }
-      .why-images { flex-direction: row; }
-      .why-img { flex: 1; }
 
       .quote-inner { grid-template-columns: 1fr; gap: 50px; }
 
@@ -1383,10 +1414,12 @@
     <div class="container">
 
       <div class="why-header">
-        <h2 class="section-heading dark reveal">Why Choose <span class="teal">Alta Exteriors</span></h2>
-        <p class="reveal reveal-d1">
-          We built Alta Exteriors on a simple belief: your home deserves craftsmen who take
-          pride in every detail — not just the ones you can see.
+        <span class="section-label reveal">Why Alta Exteriors</span>
+        <h2 class="section-heading reveal reveal-d1">Why Seattle Homeowners<br />Choose <span class="teal">Alta Exteriors</span></h2>
+        <p class="reveal reveal-d2">
+          When you hire Alta Exteriors, you're not just getting a paint job — you're getting a team
+          of licensed, insured professionals who treat your home like their own. Here's what sets us
+          apart from every other painting contractor in the Seattle area.
         </p>
       </div>
 
@@ -1396,41 +1429,67 @@
           <div class="why-item">
             <div class="why-item-header">
               <span class="why-num">01.</span>
-              <span class="why-title">Our Work Brings Results</span>
+              <span class="why-title">Results That Speak for Themselves</span>
             </div>
             <p class="why-desc">
-              We deliver transformative work that speaks for itself. No job is too big or too
-              small — we bring the same level of excellence to every project.
+              Every project we take on is treated as a showcase. We don't cut corners — we deliver
+              a flawless, durable finish whether it's an exterior repaint in Bellevue or cabinet
+              refinishing in Kirkland.
             </p>
           </div>
           <div class="why-item">
             <div class="why-item-header">
               <span class="why-num">02.</span>
-              <span class="why-title">Stress-Free &amp; Mess-Free Service</span>
+              <span class="why-title">Stress-Free &amp; Mess-Free Experience</span>
             </div>
             <p class="why-desc">
-              Paint is messy, but your experience shouldn't be. We start with thorough prep,
-              protect everything that matters, and leave every space spotless.
+              We protect your property completely before a single drop of paint opens. Furniture,
+              floors, landscaping — all covered. We clean up thoroughly every day and leave your
+              home spotless at project completion.
             </p>
           </div>
           <div class="why-item">
             <div class="why-item-header">
               <span class="why-num">03.</span>
-              <span class="why-title">On Time &amp; Communicative</span>
+              <span class="why-title">Always On Time &amp; Communicative</span>
             </div>
             <p class="why-desc">
-              We do everything start-to-finish on schedule while keeping you informed throughout.
-              If anything changes, we communicate how and when it will get done.
+              We show up when we say we will — every time. You'll receive regular updates throughout
+              your project. No ghosting, no excuses, no surprises. Just professional service from
+              start to finish.
             </p>
           </div>
           <div class="why-item">
             <div class="why-item-header">
               <span class="why-num">04.</span>
-              <span class="why-title">Transparent, Value-Based Pricing</span>
+              <span class="why-title">Honest, Transparent Pricing</span>
             </div>
             <p class="why-desc">
-              Upfront, honest pricing with zero hidden fees. You get a detailed written estimate
-              before a single brush touches your walls.
+              You'll receive a detailed written estimate before any work begins. Our quotes are
+              itemized, fair, and final — no hidden fees, no surprise charges. We compete on quality,
+              not by hiding costs.
+            </p>
+          </div>
+          <div class="why-item">
+            <div class="why-item-header">
+              <span class="why-num">05.</span>
+              <span class="why-title">Licensed, Insured &amp; Background-Checked</span>
+            </div>
+            <p class="why-desc">
+              Alta Exteriors is fully licensed and insured in Washington State. Every member of our
+              crew is professionally vetted — giving you complete peace of mind while we work on
+              your property.
+            </p>
+          </div>
+          <div class="why-item">
+            <div class="why-item-header">
+              <span class="why-num">06.</span>
+              <span class="why-title">Premium Paints Built for the PNW Climate</span>
+            </div>
+            <p class="why-desc">
+              Seattle's wet climate demands more from exterior coatings. We use only professional-grade
+              paints and primers engineered for the Pacific Northwest — superior adhesion, mold
+              resistance, and color retention that holds up year after year.
             </p>
           </div>
         </div>
@@ -1438,17 +1497,30 @@
         <div class="why-images reveal reveal-d2">
           <div class="why-img">
             <img
-              src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80"
-              alt="Freshly painted home exterior in Seattle"
+              src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=700&q=80"
+              alt="Professionally painted home exterior in Seattle, WA by Alta Exteriors"
               loading="lazy"
             />
           </div>
-          <div class="why-img">
-            <img
-              src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80"
-              alt="Professional painter at work"
-              loading="lazy"
-            />
+
+          <div class="why-service-areas">
+            <div class="why-areas-heading">Service Areas — Greater Seattle &amp; Eastside, WA</div>
+            <div class="why-areas-grid">
+              <span>Seattle, WA</span>
+              <span>Bellevue, WA</span>
+              <span>Redmond, WA</span>
+              <span>Kirkland, WA</span>
+              <span>Issaquah, WA</span>
+              <span>Sammamish, WA</span>
+              <span>Mercer Island, WA</span>
+              <span>Renton, WA</span>
+              <span>Bothell, WA</span>
+              <span>Woodinville, WA</span>
+            </div>
+            <p class="why-areas-note">
+              Serving homeowners across the greater Seattle metro area. Not sure if we cover your neighborhood?
+              <a href="#quote" style="color:var(--teal); text-decoration:underline;">Contact us</a> — we likely do.
+            </p>
           </div>
         </div>
 
